@@ -33,20 +33,25 @@ class MyTask1Test extends PHPUnit_Framework_TestCase
 	{
 		for ($i = $this->start; $i < $this->end; $i++) {
 
-			$val = $this->generated_output[$i - $this->start];
+			$idx = $i - $this->start;
+			$val = $this->generated_output[$idx];
 
-			if (($i % 3) == 0)
-			{
+			if (($i % 3) == 0) {
 				$this->assertTrue(strpos($val, MyTask1::FIZZ) !== false);
 			}
 
-			if (($i % 5) == 0)
-			{
+			if (($i % 5) == 0) {
 				$this->assertTrue(strpos($val, MyTask1::BUZZ) !== false);
+			}
+
+			if ((strpos($this->generated_output[$idx - 1], MyTask1::FIZZ) !== false) &&
+				(strpos($this->generated_output[$idx - 2], MyTask1::BUZZ) !== false)) {
+				$this->assertTrue(strpos($val, MyTask1::BAZZ) !== false);
 			}
 		}
 	}
 }
+
 /**
  * End of file testmytask1.php
  */
