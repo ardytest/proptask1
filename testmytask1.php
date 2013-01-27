@@ -35,13 +35,11 @@ class MyTask1Test extends PHPUnit_Framework_TestCase
 
 			$val = $this->generated_output[$i - $this->start];
 
-			if (($i % 3) == 0)
-			{
+			if (($i % 3) == 0) {
 				$this->assertTrue(strpos($val, MyTask1::FIZZ) !== false);
 			}
 
-			if (($i % 5) == 0)
-			{
+			if (($i % 5) == 0) {
 				$this->assertTrue(strpos($val, MyTask1::BUZZ) !== false);
 			}
 		}
