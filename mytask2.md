@@ -10,8 +10,8 @@ test.html
 - use css instead of using center tag and font tag
 - change Infodiv to id and make it lowercase
 - don't leave an empty script tag
-- about the comment '<!--// Get the data using ajax //-->': use '//' or '/**/' to comment
-- no need to use http://www.facebook.com/2008/fbml
+- about the comment `<!--// Get the data using ajax //-->`: use `//` or `/**/` to comment
+- no need to use `http://www.facebook.com/2008/fbml`
 - div element #fb-root is never used
 - use the HTML5 doctype instead of HTML 4.01 DTD
 - missing title and meta tags
@@ -21,11 +21,11 @@ getinfo.php
 -----------
 - use require instead of require_once
 - inconsistent variable naming convention - change ArrayURL variable name start with lowercase
-- extra ')' in line 4 - $ArrayURL = split('/', $_SERVER[REQUEST_URI]));
-- change '=' to '==' line 13 - if (is_object($data) = true) $status = '200 OK';
-- use trim in line 4: $ArrayURL = split('/', trim($_SERVER[REQUEST_URI], '/'));
-- should be echo json_encode( $data->getAll() ); instead of return json_encode( $data->getAll() );
-- change $status_header = 'HTTP/1.1 $status'; to $status_header = 'Content-type: application/json';
+- extra ')' in line 4 - `$ArrayURL = split('/', $_SERVER[REQUEST_URI]));`
+- change '=' to '==' line 13 - `if (is_object($data) = true) $status = '200 OK';` - and can be removed coz it's not being used
+- use trim in line 4: `$ArrayURL = split('/', trim($_SERVER[REQUEST_URI], '/'));`
+- should be `echo json_encode($data->getAll());` instead of `return json_encode($data->getAll());`
+- change `$status_header = 'HTTP/1.1 $status';` to `$status_header = 'Content-type: application/json';`
 
 data.php
 --------
@@ -33,10 +33,10 @@ data.php
 - use PHP PDO instead of php's mysql functions
 - move the mysql access credentials into a separate config.php file and define them as constants
 - dataObj::$mysql should be private
-- pass the table name into the constructor and store it in (protected) dataObj::$table - use $this->table in get() and getAll() methods
-- remove the space between the method name and the parenthesis e.g. public function __construct ($table)
+- pass the table name into the constructor and store it in (protected) `dataObj::$table` - use `$this->table` in `get()` and `getAll()` methods
+- remove the space between the method name and the parenthesis e.g. `public function __construct ($table)`
 - $table must be protected in propertyData, hdbData, hdbData and dataObj
-- no need to pass $id to getAll()
+- no need to pass $id to `getAll()`
 - the methods under propertyData and hdbData class, shouldn't be in one line
 - don't initialize $table in the propertyData, hdbData and condoData class. initialize it in the parent's constructor .e.g:
 
