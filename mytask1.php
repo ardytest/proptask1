@@ -7,6 +7,7 @@ class MyTask1
 
 	const FIZZ = 'Fizz';
 	const BUZZ = 'Buzz';
+	const BAZZ = 'Bazz';
 
 	public function __construct($start, $end)
 	{
@@ -27,6 +28,13 @@ class MyTask1
 
 			$str = (($i % 3) == 0) ? self::FIZZ : '';
 			$str .= (($i % 5) == 0) ? self::BUZZ : '';
+
+			$minus_1 = $i - 1;
+			$minus_2 = $i - 2;
+
+			$str = ((($minus_1 % 3) == 0 || ($minus_1 % 5) == 0)
+					&& (($minus_2 % 3) == 0 || ($minus_2 % 5) == 0))
+					? self::BAZZ : $str;
 
 			$output_array[] = ($str) ? $str : $i;
 		}
