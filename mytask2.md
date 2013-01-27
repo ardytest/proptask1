@@ -20,7 +20,7 @@ test.html
 getinfo.php
 -----------
 - Use require instead of require_once
-- Inconsistent variable naming convention - change ArrayURL variable name should start with lowercase
+- Inconsistent variable naming convention - change the `$ArrayURL` variable name. ideally should start with lowercase
 - Extra ')' in line 4 - `$ArrayURL = split('/', $_SERVER[REQUEST_URI]));`
 - Change '=' to '==' line 13 - `if (is_object($data) = true) $status = '200 OK';` - and can be removed coz it's not being used
 - Use trim in line 4: `$ArrayURL = split('/', trim($_SERVER[REQUEST_URI], '/'));`
