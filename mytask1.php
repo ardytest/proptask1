@@ -24,7 +24,7 @@ class MyTask1
 	 */
 	public function generateOutput()
 	{
-		for($i = $this->start; $i <= $this->end; $i++) {
+		for ($i = $this->start; $i <= $this->end; $i++) {
 
 			$str = (($i % 3) == 0) ? self::FIZZ : '';
 			$str .= (($i % 5) == 0) ? self::BUZZ : '';
