@@ -10,3 +10,8 @@ e.g. If you want to run the script with range 1 to 15. Run:
 or
 
 	php mytask1.php -r1,15
+
+
+PHPUnit test:
+
+	phpunit testmytask1.php
