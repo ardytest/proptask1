@@ -40,19 +40,23 @@ data.php
 - The methods under propertyData and hdbData class, shouldn't be in one line
 - Don't initialize $table in the propertyData, hdbData and condoData class. initialize it in the parent's constructor .e.g:
 
-	class propertyData extends dataObj {
+	class propertyData extends dataObj
+	{
 
 	    public function __construct($table = 'Property')
 	    {
 	        parent::__construct($table);
 	    }
+	}
 
-	class hdbData extends propertyData {
+	class hdbData extends propertyData
+	{
 
 	    public function __construct()
 	    {
 	        parent::__construct('HDB');
 	    }
+	}
 
 - Some initialized properties under propertyData are not being used
 - Inconsistent variable naming convention (some all uppercase, some lowercase, etc.)
@@ -68,4 +72,4 @@ data.sql
 --------
 - CREATE TABLE Property - Change Engine to InnoDB, foreign keys don't work with MyISAM
 - CREATE TABLE Condo - PID should be BIGINT. foreign key and the field it references to should have the same type
-- Database,tables, and field names should be in lowercase
+- Database, tables, and field names should be in lowercase
