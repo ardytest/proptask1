@@ -28,9 +28,6 @@ class MyTask1
 			$str = (($i % 3) == 0) ? self::FIZZ : '';
 			$str .= (($i % 5) == 0) ? self::BUZZ : '';
 
-			$minus_1 = $i - 1;
-			$minus_2 = $i - 2;
-
 			$output_array[] = ($str) ? $str : $i;
 		}
 
