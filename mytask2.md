@@ -59,8 +59,8 @@ data.php
 	}
 
 - Some initialized properties under propertyData are not being used
-- Inconsistent variable naming convention (some all uppercase, some lowercase, etc.)
-- PropertyData::getTitle() returns uninitialized $Type instead of title
+- Inconsistent variable naming convention (some all uppercase, some lowercase, etc.), ideally should be camelCase
+- PropertyData::getTitle() returns uninitialized $Type instead of $Title
 - PropertyData::$hdbblock should be under hdbData class
 - Table field names like 'Living_room', 'Type','Title' should be stored as class constants
 - PropertyData::$swimmingpool is never used
